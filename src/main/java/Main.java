@@ -1,3 +1,4 @@
+import com.fengli.CGLlBProxy.CgliBProxy;
 import com.fengli.JDKDynamic.JdkProxy;
 import com.fengli.JDKDynamic.UserDao;
 import com.fengli.JDKDynamic.UserDaoImpl;
@@ -15,12 +16,23 @@ import com.fengli.JDKDynamic.UserDaoImpl;
  */
 public class Main {
     public static void main(String argc[]){
+        /* jdk动态代理方法
         //创建代理对象
         JdkProxy jdkProxy=new JdkProxy();
         //创建目标对象
         UserDao userDao=new UserDaoImpl();
         //获取代理对象增强后的目标对象
         UserDao userDao1= (UserDao) jdkProxy.createProxy(userDao);
+        //执行方法
+        userDao1.save();*/
+
+        //CGLIB动态代理方法
+        //创建代理对象
+        CgliBProxy cgliBProxy=new CgliBProxy();
+        //创建目标对象
+        com.fengli.CGLlBProxy.UserDao userDao=new com.fengli.CGLlBProxy.UserDao();
+        //获取代理对象增强后的目标对象
+        com.fengli.CGLlBProxy.UserDao userDao1= (com.fengli.CGLlBProxy.UserDao) cgliBProxy.createProxy(userDao);
         //执行方法
         userDao1.save();
     }
