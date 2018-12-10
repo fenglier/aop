@@ -18,8 +18,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class TestXmlAspectj {
     public static void main(String argc[]){
-        //E:\IdeaProjects\aop\src\main\java\com\fengli\XMLAspectJ\applicationContext.xml
-        //String xmlPath="com/fengli/XMLAspectJ/applicationContext.xml";
+        //E:\IdeaProjects\aop\src\main\java\com\fengli\XMLAspectJ\proxyFactoryBeanApplicationContext.xml
+        //String xmlPath="com/fengli/XMLAspectJ/proxyFactoryBeanApplicationContext.xml";
           String xmlPath= "applicationContext.xml";
         ApplicationContext applicationContext=new ClassPathXmlApplicationContext(xmlPath);
         //1 从spring获得内容
