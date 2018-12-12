@@ -1,5 +1,7 @@
 package com.fengli.JDKDynamic;
 
+import org.springframework.stereotype.Repository;
+
 /**
  * @Package: [com.fengli.JDKDynamic.UserDaoImpl]
  * @ClassName: [UserDaoImpl]
@@ -11,6 +13,7 @@ package com.fengli.JDKDynamic;
  * @Version: [v1.0]
  * ${tags}
  */
+@Repository("userDao")
 public class UserDaoImpl implements UserDao {
 
     public void save() {
